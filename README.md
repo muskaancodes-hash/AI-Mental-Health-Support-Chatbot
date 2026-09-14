@@ -71,6 +71,37 @@ The system uses a CSV dataset to identify the user's situation and provide suita
 ## Testing
 
 The system was tested with the message:
+# Part 4: Safety Filter
+
+A basic safety filter was added to make the chatbot more responsible and supportive.
+
+## Features
+
+- Detects basic crisis-related keywords
+- Handles offensive language
+- Provides a clear disclaimer
+- Reminds users that the chatbot is not a mental health professional
+- Encourages users to contact trusted people, qualified professionals, or emergency services when appropriate
+
+## Tools Used
+
+- Python
+
+## How It Works
+
+1. The user's message is converted to lowercase.
+2. The message is checked for crisis-related keywords.
+3. Offensive words are also checked.
+4. A suitable safety response is returned based on the message.
+5. Normal messages receive a general emotional-support disclaimer.
+
+## Testing
+
+The safety filter was tested with:
+
+"I am feeling stressed today"
+
+The system successfully classified the message as safe and returned the appropriate disclaimer.
 
 "I am feeling stressed today"
 
