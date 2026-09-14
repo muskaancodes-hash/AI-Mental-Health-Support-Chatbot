@@ -27,3 +27,51 @@ pip install -r requirements.txt
 ```
 
 This completes the basic project setup.
+# Part 3: Wellness Recommendation System
+
+In this part, a wellness recommendation system was added to the AI Mental Health Support Chatbot.
+
+The system uses a CSV dataset to identify the user's situation and provide suitable wellness suggestions.
+
+## Features
+
+- Meditation recommendations
+- Motivation and emotional support
+- Mindful activities
+- Healthy eating suggestions
+- Sleep-related tips
+- Singing and dancing activities
+- Painting and creative activities
+- Music suggestions
+- Nature activities
+- Trip and outing ideas
+- Social connection
+- Hobby suggestions
+
+## Tools Used
+
+- Python
+- Pandas
+- CSV Dataset
+
+## How It Works
+
+1. The user's message is converted to lowercase.
+2. Keywords are used to identify the user's situation.
+3. The matching situation is searched in the wellness CSV dataset.
+4. Relevant wellness recommendations are returned.
+5. If no matching situation is found, general wellness recommendations are provided.
+
+## File Used
+
+`wellness.py`
+
+`wellness_recommendations.csv`
+
+## Testing
+
+The system was tested with the message:
+
+"I am feeling stressed today"
+
+The system successfully returned recommendations for meditation, motivation, mindful activities, healthy eating, sleeping, singing, dancing, painting, music, nature, trips, social connection, and hobbies.
