@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ```
 
 This completes the basic project setup.
-# Part 3: Wellness Recommendation System
+# Part 2: Wellness Recommendation System
 
 In this part, a wellness recommendation system was added to the AI Mental Health Support Chatbot.
 
