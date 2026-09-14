@@ -71,7 +71,7 @@ The system uses a CSV dataset to identify the user's situation and provide suita
 ## Testing
 
 The system was tested with the message:
-# Part 4: Safety Filter
+# Part 3: Safety Filter
 
 A basic safety filter was added to make the chatbot more responsible and supportive.
 
