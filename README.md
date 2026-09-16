@@ -106,3 +106,39 @@ The system successfully classified the message as safe and returned the appropri
 "I am feeling stressed today"
 
 The system successfully returned recommendations for meditation, motivation, mindful activities, healthy eating, sleeping, singing, dancing, painting, music, nature, trips, social connection, and hobbies.
+# Part 4: Flask Backend
+
+In this part, a Flask backend was created for the AI Mental Health Support Chatbot.
+
+## Features
+
+- Flask web application
+- Home route for the chatbot interface
+- `/chat` API endpoint for user messages
+- Connects AI chatbot with the Flask backend
+- Connects wellness recommendation system
+- Connects safety filter
+- Returns chatbot and wellness responses in JSON format
+
+## Tools Used
+
+- Python
+- Flask
+- Hugging Face Transformers
+- Pandas
+
+## How It Works
+
+1. User sends a message through the web interface.
+2. Flask receives the message.
+3. The safety filter checks the message.
+4. The AI chatbot generates a response.
+5. The wellness system provides relevant suggestions.
+6. Flask sends the response back to the frontend.
+
+## Testing
+
+The Flask application was successfully started using:
+
+```bash
+python app.py
