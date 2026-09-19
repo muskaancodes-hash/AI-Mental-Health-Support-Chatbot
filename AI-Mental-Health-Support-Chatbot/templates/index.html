@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mental Health Support Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI Mental Health Support Chatbot</h1>
+
+        <p class="subtitle">
+            I'm here to provide general emotional support and wellness suggestions.
+        </p>
+
+        <div id="chat-box"></div>
+
+        <div class="input-area">
+            <input
+                type="text"
+                id="user-input"
+                placeholder="How are you feeling today?"
+            >
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+        <div id="wellness-box"></div>
+
+        <p class="disclaimer">
+            This chatbot is not a substitute for professional mental health care.
+        </p>
+
+    </div>
+
+    <script>
+        async function sendMessage() {
+
+            const input = document.getElementById("user-input");
+            const message = input.value.trim();
+
+            if (!message) {
+                return;
+            }
+
+            const chatBox = document.getElementById("chat-box");
+
+            chatBox.innerHTML += `
+                <div class="user-message">
+                    <strong>You:</strong> ${message}
+                </div>
+            `;
+
+            input.value = "";
+
+            try {
+
+                const response = await fetch("/chat", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        message: message
+                    })
+                });
+
+                const data = await response.json();
+
+                chatBox.innerHTML += `
+                    <div class="bot-message">
+                        <strong>Bot:</strong> ${data.response}
+                    </div>
+                `;
+
+                if (data.wellness) {
+
+                    const wellnessBox =
+                        document.getElementById("wellness-box");
+
+                    wellnessBox.innerHTML = `
+                        <h2>🌿 Wellness Suggestions</h2>
+                        <p>🧘 <strong>Meditation:</strong> ${data.wellness.meditation}</p>
+                        <p>💪 <strong>Motivation:</strong> ${data.wellness.motivation}</p>
+                        <p>🧠 <strong>Mindful Activity:</strong> ${data.wellness.mindful_activity}</p>
+                        <p>🥗 <strong>Healthy Eating:</strong> ${data.wellness.healthy_eating}</p>
+                        <p>😴 <strong>Sleeping:</strong> ${data.wellness.sleeping}</p>
+                        <p>🎵 <strong>Singing:</strong> ${data.wellness.singing}</p>
+                        <p>💃 <strong>Dancing:</strong> ${data.wellness.dancing}</p>
+                        <p>🎨 <strong>Painting:</strong> ${data.wellness.painting}</p>
+                        <p>🎧 <strong>Music:</strong> ${data.wellness.music}</p>
+                        <p>🌳 <strong>Nature:</strong> ${data.wellness.nature_activity}</p>
+                        <p>🧳 <strong>Trip:</strong> ${data.wellness.trip_idea}</p>
+                        <p>🤝 <strong>Social Connection:</strong> ${data.wellness.social_connection}</p>
+                        <p>🎯 <strong>Hobby:</strong> ${data.wellness.hobby}</p>
+                    `;
+                }
+
+            } catch (error) {
+
+                chatBox.innerHTML += `
+                    <div class="bot-message">
+                        <strong>Error:</strong> Unable to connect to the chatbot.
+                    </div>
+                `;
+            }
+        }
+
+        document.getElementById("user-input").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                sendMessage();
+            }
+        });
+    </script>
+
+</body>
+</html>
