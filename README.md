@@ -142,3 +142,38 @@ The Flask application was successfully started using:
 
 ```bash
 python app.py
+# Part 5: Chatbot Frontend
+
+In this part, a basic frontend interface was created for the AI Mental Health Support Chatbot using HTML.
+
+## Features
+
+- Chatbot title and introduction
+- User message input
+- Send button
+- AI chatbot response display
+- Wellness recommendations display
+- Safety disclaimer
+- Enter key support for sending messages
+
+## Tools Used
+
+- HTML
+- JavaScript
+- Flask
+
+## How It Works
+
+1. The user enters a message.
+2. The frontend sends the message to the Flask `/chat` API.
+3. Flask processes the message using the chatbot, safety filter, and wellness system.
+4. The AI response is displayed on the webpage.
+5. Wellness recommendations are displayed when available.
+
+## Testing
+
+The frontend was tested with:
+
+"I am feeling stressed today"
+
+The chatbot successfully returned an AI response along with wellness recommendations such as meditation, motivation, mindful activities, sleep, music, nature activities, social connection, and hobbies.
