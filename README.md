@@ -1,3 +1,4 @@
+
 # AI-Mental-Health-Support-Chatbot
 An AI chatbot that provides emotional support and personalized wellness recommendations using Python, Hugging Face Transformers, and Flask.
 # AI Mental Health Support Chatbot
@@ -177,3 +178,35 @@ The frontend was tested with:
 "I am feeling stressed today"
 
 The chatbot successfully returned an AI response along with wellness recommendations such as meditation, motivation, mindful activities, sleep, music, nature activities, social connection, and hobbies.
+# Part 6: Emotional AI Responses
+
+In this part, the chatbot was improved to provide more natural, caring, and supportive responses.
+
+## Features
+
+- Detects common emotions and feelings
+- Provides supportive responses for stress, sadness, loneliness, anger, anxiety, and tiredness
+- Makes the chatbot conversation more natural
+- Encourages users to share their feelings
+- Keeps the chatbot focused on general emotional support
+
+## Tools Used
+
+- Python
+- Hugging Face Transformers
+- DialoGPT
+
+## How It Works
+
+1. The user enters a message.
+2. The chatbot checks for common emotional keywords.
+3. If an emotion is detected, a supportive response is generated.
+4. For other messages, the AI chatbot generates the response normally.
+
+## Testing
+
+The chatbot was tested with messages such as:
+
+"I am feeling stressed today"
+
+The chatbot successfully provided a caring and supportive response instead of only giving a basic AI-generated reply.
