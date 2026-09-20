@@ -9,7 +9,15 @@
 
 <body>
 
-    <div class="container">
+    <div class="ai-avatar">
+    <div class="avatar-face">
+        <img src="{{ url_for('static', filename='avatar.png') }}" alt="AI Support Assistant">
+    </div>
+
+    <div class="avatar-name">AI Support Assistant</div>
+    <div class="avatar-status">● Listening...</div>
+</div>
+
 
         <h1>AI Mental Health Support Chatbot</h1>
 
@@ -75,7 +83,13 @@
                         <strong>Bot:</strong> ${data.response}
                     </div>
                 `;
+                 // Make the AI response speak
+                  const speech = new SpeechSynthesisUtterance(data.response);
+                  speech.rate = 0.9;
+                  speech.pitch = 1.1;
+                  speech.volume = 1;
 
+                  window.speechSynthesis.speak(speech);
                 if (data.wellness) {
 
                     const wellnessBox =
