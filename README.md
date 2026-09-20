@@ -210,3 +210,65 @@ The chatbot was tested with messages such as:
 "I am feeling stressed today"
 
 The chatbot successfully provided a caring and supportive response instead of only giving a basic AI-generated reply.
+# Part 7: AI Avatar and Voice Response
+
+In this part, an AI avatar and voice response feature were added to make the chatbot more interactive and user-friendly.
+
+## Features
+
+- Added a visual AI support avatar
+- Displays AI Support Assistant on the chatbot page
+- Added text-to-speech for chatbot responses
+- AI responses can be heard through the browser
+- Improved the overall user experience
+
+## Tools Used
+
+- HTML
+- CSS
+- JavaScript
+- Flask
+- Browser Speech Synthesis API
+
+## How It Works
+
+1. The user enters a message.
+2. The chatbot generates a supportive response.
+3. The response is displayed on the webpage.
+4. The browser reads the AI response aloud using text-to-speech.
+5. The AI avatar is displayed above the chatbot.
+
+## Testing
+
+The avatar was successfully displayed on the webpage and the voice response feature was added to make the chatbot feel more interactive.
+# Part 7: AI Avatar and Voice Response
+
+In this part, an AI avatar and voice response feature were added to make the chatbot more interactive and user-friendly.
+
+## Features
+
+- Added a visual AI support avatar
+- Displays AI Support Assistant on the chatbot page
+- Added text-to-speech for chatbot responses
+- AI responses can be heard through the browser
+- Improved the overall user experience
+
+## Tools Used
+
+- HTML
+- CSS
+- JavaScript
+- Flask
+- Browser Speech Synthesis API
+
+## How It Works
+
+1. The user enters a message.
+2. The chatbot generates a supportive response.
+3. The response is displayed on the webpage.
+4. The browser reads the AI response aloud using text-to-speech.
+5. The AI avatar is displayed above the chatbot.
+
+## Testing
+
+The avatar was successfully displayed on the webpage and the voice response feature was added to make the chatbot feel more interactive.
